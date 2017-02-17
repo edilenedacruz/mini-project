@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "User can create an account" do
-    it "selects the option to create an account" do
+    xit "selects the option to create an account" do
       visit '/users'
 
       click_link("Create an account")
@@ -10,15 +10,14 @@ RSpec.feature "User can create an account" do
       fill_in('First name', with: 'Edilene')
       fill_in('Last name', with: 'Stormy')
       fill_in('Username', with: 'perfectstorm')
+      fill_in('Email', with: 'perfectstorm@email.com')
       fill_in('Password', with: 'password')
       fill_in('Password confirmation', with: 'password')
       click_on('Create account')
 
-      expect(current_path).to eq(user_path(User.first))
+      expect(current_path).to eq(user_path(@user))
       expect(page).to have_content("Welcome, Edilene!")
   end
-
-  # describe "can"
 end
 
 
