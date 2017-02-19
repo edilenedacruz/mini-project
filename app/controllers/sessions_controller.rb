@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :authorize!
+  # before_action :authorize!
 
   def new
   end
@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
+    flash[:notice] = "You are now logged out."
     redirect_to login_path
   end
 end

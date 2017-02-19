@@ -1,4 +1,14 @@
+
+
 <h1>Welcome, <%= @user.first_name %>!</h1>
 
+<% if current_user.role == 1 %>
+  <%= link_to "Create a Category", new_admin_category_path %><br>
+  <%= link_to "Create a Gif", new_admin_gif_path %>
+<% end %>
+
 <br>
+
+ <%= link_to "Add more gifs to your favorite list ", gifs_path %><br>
+ <%= link_to "Display your favorites", favorite_gifs_path %><br>
 <%= link_to "Logout", logout_path, method: :delete %>

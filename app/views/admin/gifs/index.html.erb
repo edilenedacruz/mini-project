@@ -1,0 +1,7 @@
+<% @gifs.each do |gif| %>
+<ul>
+  <%= image_tag(gif.image_path) %>
+</ul>
+<% end %>
+
+<%= link_to "Return", admin_categories_path %>

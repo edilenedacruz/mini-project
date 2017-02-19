@@ -12,6 +12,15 @@ class ApplicationController < ActionController::Base
 
   def authorize!
     current_user
+    # render file: '/public/404' unless current_user
+  end
+
+  def current_admin?
+    if current_user.role == 1
+      true
+    else
+      false
+    end
   end
 
 end
