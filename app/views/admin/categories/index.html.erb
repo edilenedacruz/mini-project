@@ -1,8 +1,8 @@
 <h1>Categories list</h1>
 
 <% @categories.each do |category| %>
-  <ul><%=  category.title %><%= link_to "Delete", admin_category_path(category), method: "delete" %></ul>
+  <ul><%=  category.title %><br><%= link_to "Delete", admin_category_path(category), method: "delete", class: "button" %></ul>
 <% end %>
 
 
-<%= link_to "Return to main user page", user_path(current_user) %>
+<%= button_to "Return to main user page", user_path(current_user), class: "button" %>

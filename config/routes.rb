@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
   resources :users
+  resources :favorite_gifs, only: [:index, :new, :create, :destroy, :show]
   resources :gifs, only: [:index]
-  resources :favorite_gifs
-
+  resources :categories
   namespace :admin do
-    resources :gifs
-    resources :categories
+    resources :gifs, only: [:index, :new, :create, :destroy]
+    resources :categories, only: [:index, :new, :create, :destroy]
   end
 
   get '/login', to: 'sessions#new'

@@ -1,6 +1,9 @@
 <h1><%= @user.first_name %>'s favorite gifs</h1>
 
-<!-- <#% @favorite_gifs.each do |gif| %>
-  <%#= gif %>
-  <%= link_to "Unfavorite this gif, favorite_gif_path(@user), method: "delete" %>
-<#% end %> -->
+<% @user.favorite_gifs.each do |favorite| %>
+  <%= image_tag(Gif.find_by(id: favorite.gif_id).image_path) %><br>
+  Gif's category: <%= Gif.find_by(id: favorite.gif_id).title %><br>
+  <%= button_to "Unfavorite", favorite_gif_path(favorite), method: :delete, class: "button" %>
+  <% end %>
+
+  <%= button_to "Back to your main page", user_path(@user), class: "button" %>

@@ -21,6 +21,12 @@ class Admin::GifsController < Admin::BaseController
       end
   end
 
+  def destroy
+    @gif = Gif.find(params[:id])
+    @gif.destroy
+    redirect_to admin_gifs_path
+  end
+
   private
 
   def gif_params

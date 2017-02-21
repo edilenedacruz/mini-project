@@ -1,4 +1,5 @@
 class Admin::CategoriesController < Admin::BaseController
+  before_action :authorize!
 
   def index
     @categories = Category.all
