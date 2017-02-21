@@ -1,0 +1,7 @@
+<h1>Type one word to create a category</h1>
+
+<%= form_for [:admin, @category] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.submit "Create a Category" %>
+<% end %>

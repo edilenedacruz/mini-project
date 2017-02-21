@@ -1,0 +1,11 @@
+<h1>List of gifs created</h1>
+
+<% @gifs.each do |gif| %>
+<div class="gif-#{gif.title}">
+  <%= image_tag(gif.image_path) %><br>
+  Gif name: <%= gif.category.title %><br>
+  <%= button_to "Delete gif", admin_gif_path(gif), method: "delete", class: "button" %>
+</div>
+<% end %>
+
+<%= button_to "Return", user_path(current_user), class: "button" %>

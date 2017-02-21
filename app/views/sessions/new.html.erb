@@ -1,0 +1,16 @@
+<body class="welcome">
+<h1>Welcome to Gif Generator</h1>
+
+If you have an account, please login: <br>
+<%= form_for :session do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit "Login", class: "button" %>
+<% end %>
+or
+<br>
+<!-- <%#= button_to "Create an account", users_path, class: "button" %> -->
+<%= button_to "Create an account", users_path, class: "button" %>
+</body>
