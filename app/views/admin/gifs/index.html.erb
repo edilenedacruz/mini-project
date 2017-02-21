@@ -1,6 +1,6 @@
 <h1>List of gifs created</h1>
 
-<% @gifs.each do |gif| %>
+<% @gifs.order(:title).each do |gif| %>
 <div class="gif-#{gif.title}">
   <%= image_tag(gif.image_path) %><br>
   Gif name: <%= gif.category.title %><br>

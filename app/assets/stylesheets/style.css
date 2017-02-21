@@ -48,6 +48,10 @@ a:visited {
   color: white;
   text-decoration: none;
 }
+.footer {
+  font-size: 20px;
+  color: white;
+}
 
 pink =  RGB(221,75,89)
 yellow = RGB(254,197,46)

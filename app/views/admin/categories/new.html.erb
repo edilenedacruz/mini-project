@@ -3,5 +3,5 @@
 <%= form_for [:admin, @category] do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-  <%= f.submit "Create a Category" %>
+  <%= f.submit "Create a Category", class: "button" %>
 <% end %>

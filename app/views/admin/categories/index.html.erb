@@ -1,6 +1,6 @@
 <h1>Categories list</h1>
 
-<% @categories.each do |category| %>
+<% @categories.order(:title).each do |category| %>
   <ul><%=  category.title %><br><%= link_to "Delete", admin_category_path(category), method: "delete", class: "button" %></ul>
 <% end %>
 
