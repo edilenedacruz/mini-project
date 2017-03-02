@@ -6,3 +6,5 @@
   <%= button_to "Favorite this gif", {:controller => favorite_gifs_path, :action => "create", :gif_id => gif.id, :user_id => current_user.id}, class: "button"  %><br>
 </div>
 <% end %>
+
+  <%= button_to "Return to your main page", user_path(@user), class: "button", method: :get %>

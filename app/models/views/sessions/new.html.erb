@@ -9,8 +9,7 @@ If you have an account, please login: <br>
   <%= f.password_field :password %>
   <%= f.submit "Login", class: "button" %>
 <% end %>
-or
+<p>or</p>
 <br>
-<!-- <%#= button_to "Create an account", users_path, class: "button" %> -->
-<%= button_to "Create an account", users_path, class: "button" %>
+<%= button_to "Create an account", users_path, class: "button", method: :put %>
 </body>

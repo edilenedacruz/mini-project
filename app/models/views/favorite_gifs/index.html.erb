@@ -6,4 +6,4 @@
   <%= button_to "Unfavorite", favorite_gif_path(favorite), method: :delete, class: "button" %>
   <% end %>
 
-  <%= button_to "Back to your main page", user_path(@user), class: "button" %>
+  <%= button_to "Return to your main page", user_path(@user), class: "button", method: :get %>

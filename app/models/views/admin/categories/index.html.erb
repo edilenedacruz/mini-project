@@ -1,0 +1,7 @@
+<h1>Categories list</h1>
+
+<% @categories.order(:title).each do |category| %>
+  <ul><%= category.title %><br><%= link_to "Delete", admin_category_path(category), method: "delete", class: "button" %></ul>
+<% end %>
+
+<%= button_to "Return to Admin user page", user_path(current_user), class: "button", method: :get %>

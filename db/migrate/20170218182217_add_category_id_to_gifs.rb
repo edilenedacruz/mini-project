@@ -3,3 +3,5 @@ class AddCategoryIdToGifs < ActiveRecord::Migration
     add_reference :gifs, :category, index: true, foreign_key: true
   end
 end
+
+=
