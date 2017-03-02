@@ -37,6 +37,7 @@ RSpec.feature "User can login and logout" do
     end
 
     click_on "Logout"
-    expect(page).to have_content("Have an account, please login:")
+
+    expect(page).to have_content("If you have an account, please login:")
   end
 end
